@@ -10,10 +10,15 @@ export class BindingComponent {
   isDisabled : boolean = false;
 
   inputString: string = 'This is input';
+  name: string = 'Hello World';
 
   onClick(){
     console.log('button clicked');
     this.isDisabled = true;
+  }
+
+  onSubmit(value){
+    this.inputString = value;
   }
 
 }

@@ -7,9 +7,14 @@
     <div class="col-6">
             
         <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" [(ngModel)]="inputString" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" [(ngModel)]="inputString">
+            </div>
+            <h2>{{ inputString }}</h2>
+
+        <!-- <div class="input-group mb-3">
+            <input #name type="text" class="form-control" [value]="inputString"  >
+            <button class="btn btn-primary" (click)="onSubmit(name.value)">Submit</button>
         </div>
-        <h2>{{ inputString }}</h2>
+        <h2>{{ inputString }}</h2> -->
     </div>
 </div>
