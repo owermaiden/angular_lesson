@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-6">
+            <h2>{{ titles }}</h2>
+            <button class="btn btn-primary" (click)="onClick()" [disabled]="isDisabled">Click Me</button>
+
+    </div>
+    <div class="col-6">
+            
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" [(ngModel)]="inputString" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <h2>{{ inputString }}</h2>
+    </div>
+</div>
