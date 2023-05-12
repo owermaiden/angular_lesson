@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./xcomponent.component.css']
 })
 export class XcomponentComponent {
+  mentors: string[] = ['Ower', 'Matt', 'Sahin'];
+  selectedMentor: string = '';
 
+  onSelectMentor(mentor){
+    this.selectedMentor = mentor;
+  }
+
+  onLikeMentor(mentor: string){
+    let index = this.mentors.findIndex(d => d === mentor);
+    this.mentors[index] = `${mentor} liked`;
+  }
 }

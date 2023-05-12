@@ -7,6 +7,7 @@ import { BindingComponent } from './binding/binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { XcomponentComponent } from './xcomponent/xcomponent.component';
+import { ChildComponent } from './xcomponent/child/child.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { XcomponentComponent } from './xcomponent/xcomponent.component';
     TypecsriptComponent,
     BindingComponent,
     DirectivesComponent,
-    XcomponentComponent
+    XcomponentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
