@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-6">
+        <h2  [ngStyle]="{'color' : isDisabled ? 'red' : 'green' }"  >Angular Directives</h2>
+        <br>
+        <button class="btn btn-primary" [ngClass]="{'ower' : isDisabled}"
+        
+        (click)="onClick()">
+            Click Me
+        </button>
+    </div>
+    <div class="col-6">
+        <ul class="list-group" *ngIf="isDisabled">
+            <li class="list-group-item" *ngFor="let mentor of mentors; let i = index"> {{ i + 1 }}</li>
+    
+          </ul>
+
+    </div>
+</div>
