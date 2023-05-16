@@ -12,11 +12,20 @@ export class MentorService {
     new Mentor('Sahin', 3)
   ];
 
+  selectedMentor: Mentor = this.mentors[1];
+
 
   constructor() { }
 
   public getMentors(): Mentor[]{
     return this.mentors.slice();
   }
+
+  public likeMentor(mentor: Mentor){
+    let index = this.mentors.findIndex(d => d.name === mentor.name);
+    this.mentors[index].likeCount += 1;
+  }
+
+
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MentorService } from 'src/app/services/mentor.service';
 import { Mentor } from 'src/app/shared/mentor';
 
 @Component({
@@ -7,9 +8,15 @@ import { Mentor } from 'src/app/shared/mentor';
   styleUrls: ['./leftside.component.css']
 })
 export class LeftsideComponent {
-  selectedMentor: Mentor = {name: 'Ower', likeCount: 2};
+  selectedMentor: Mentor;
+
+  constructor(private service : MentorService){
+
+    this.selectedMentor = this.service.selectedMentor;
+
+  }
 
   onLikeMentor(mentor: Mentor){
-    
+    this.service.likeMentor(mentor);
   }
 }
