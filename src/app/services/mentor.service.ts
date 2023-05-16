@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Mentor } from '../shared/mentor';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class MentorService {
     new Mentor('Sahin', 3)
   ];
 
-  selectedMentor: Mentor = this.mentors[1];
+  selectedMentor: Mentor = this.mentors[0];   // Angular change detection...
+  selectedMentor$: Subject<Mentor> = new Subject(); // Subject is a kind of obervable
 
 
   constructor() { }
@@ -25,6 +27,20 @@ export class MentorService {
     let index = this.mentors.findIndex(d => d.name === mentor.name);
     this.mentors[index].likeCount += 1;
   }
+
+  public selectMentor(mentor: Mentor){
+    let index = this.mentors.findIndex(d => d.name === mentor.name);
+    this.selectedMentor = this.mentors[index];
+    // this.selectedMentor$.next(this.mentors[index]);
+    console.log(this.selectedMentor);
+  }
+
+  public getSelectedMentor(): Mentor{
+    return this.selectedMentor;
+  }
+
+
+  // Stream Api 
 
 
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MentorService } from 'src/app/services/mentor.service';
 import { Mentor } from 'src/app/shared/mentor';
 
@@ -8,15 +8,22 @@ import { Mentor } from 'src/app/shared/mentor';
   styleUrls: ['./leftside.component.css']
 })
 export class LeftsideComponent {
-  selectedMentor: Mentor;
+  selectedMentor: Mentor | undefined;
 
   constructor(private service : MentorService){
-
-    this.selectedMentor = this.service.selectedMentor;
-
+    this.selectedMentor = this.service.getSelectedMentor();
   }
+
+  // ngOnInit(): void {
+  //   this.service.selectedMentor$.subscribe(
+  //     res => this.selectedMentor = res
+  //   )
+  // }
 
   onLikeMentor(mentor: Mentor){
     this.service.likeMentor(mentor);
   }
 }
+
+
+//

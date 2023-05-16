@@ -14,7 +14,11 @@ export class RightSideComponent {
  constructor(private service: MentorService){
 
   this.mentors = this.service.getMentors();
-  
+
+ }
+
+ onSelectMentor(mentor : Mentor){
+  this.service.selectMentor(mentor);
  }
 
 
