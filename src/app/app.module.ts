@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { XcomponentComponent } from './xcomponent/xcomponent.component';
 import { ChildComponent } from './xcomponent/child/child.component';
+import { LeftsideComponent } from './interComponent/leftside/leftside.component';
+import { RightSideComponent } from './interComponent/right-side/right-side.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ChildComponent } from './xcomponent/child/child.component';
     BindingComponent,
     DirectivesComponent,
     XcomponentComponent,
-    ChildComponent
+    ChildComponent,
+    LeftsideComponent,
+    RightSideComponent
   ],
   imports: [
     BrowserModule,

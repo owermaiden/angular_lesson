@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-  @Input() selectedMentor: string = 'ower';
+  @Input() selectedMentor: string = '';
   @Output() likeEvent = new EventEmitter<string>();
 
   onLike(mentor: string){
