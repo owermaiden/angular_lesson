@@ -10,6 +10,20 @@ import { XcomponentComponent } from './xcomponent/xcomponent.component';
 import { ChildComponent } from './xcomponent/child/child.component';
 import { LeftsideComponent } from './interComponent/leftside/leftside.component';
 import { RightSideComponent } from './interComponent/right-side/right-side.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [ 
+
+  {path: 'bindings', component: BindingComponent },
+  {path: 'directives', component: DirectivesComponent},
+  {path: 'xcross', component: XcomponentComponent},
+  {path: 'typescript', component: TypecsriptComponent},
+  {path: 'inter', component: RightSideComponent},
+  {path: 'left', component: LeftsideComponent},
+  {path: '', pathMatch: 'full', component: BindingComponent}
+
+]
+
 
 @NgModule({
   declarations: [
@@ -24,8 +38,10 @@ import { RightSideComponent } from './interComponent/right-side/right-side.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
