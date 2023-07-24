@@ -11,6 +11,7 @@ import { ChildComponent } from './xcomponent/child/child.component';
 import { LeftsideComponent } from './interComponent/leftside/leftside.component';
 import { RightSideComponent } from './interComponent/right-side/right-side.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ServiceDemoComponent } from './servicesDemo/service-demo/service-demo.component';
 
 const routes: Routes = [ 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'typescript', component: TypecsriptComponent},
   {path: 'inter', component: RightSideComponent},
   {path: 'left', component: LeftsideComponent},
+  {path: 'service', component: ServiceDemoComponent},
   {path: '', pathMatch: 'full', component: BindingComponent}
 
 ]
@@ -34,7 +36,8 @@ const routes: Routes = [
     XcomponentComponent,
     ChildComponent,
     LeftsideComponent,
-    RightSideComponent
+    RightSideComponent,
+    ServiceDemoComponent
   ],
   imports: [
     BrowserModule,
