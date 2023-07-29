@@ -24,9 +24,6 @@ export class RightSideComponent implements OnInit{
   this.router.navigate(['left']);
  }
 
-//  goToLeftSide(){
-  
-//  }
 
 
 

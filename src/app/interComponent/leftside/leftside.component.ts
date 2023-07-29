@@ -14,17 +14,12 @@ export class LeftsideComponent implements OnInit {
   constructor(private service : MentorService, private router: Router){}
 
   ngOnInit(): void {
-    // this.selectedMentor = this.service.getSelectedMentor();
-    this.service.selectedMentor$$.subscribe(
-          res => this.selectedMentor = res
-        )
+    this.selectedMentor = this.service.getSelectedMentor();
+    // this.service.selectedMentor$$.subscribe(
+    //       res => this.selectedMentor = res
+    //     )
   }
 
-  // ngOnInit(): void {
-  //   this.service.selectedMentor$.subscribe(
-  //     res => this.selectedMentor = res
-  //   )
-  // }
 
   onLikeMentor(mentor: Mentor){
     this.service.likeMentor(mentor);

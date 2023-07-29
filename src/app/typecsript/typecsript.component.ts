@@ -14,6 +14,7 @@ export class TypecsriptComponent {
   private sayi: number = 12;
   sayi2: number = 12.4;
   readonly isEqual: boolean = false;
+  static BookCount: number = 300;
   object1 : any = 23;
   object2 : any = 'asjcbak';
 
@@ -62,7 +63,7 @@ export class TypecsriptComponent {
     givenArray.pop()
     givenArray.length * 2;
     givenArray.forEach(n => n * 2);
-    givenArray.findIndex(n => n === 10); // Object equality
+    givenArray.findIndex(n => n === 10); // equality
     givenArray.find(n => n == 10);
     givenArray.slice(); // a copy of the array
     givenArray.splice(10, 1); // starting from element 10, remove only one element
@@ -140,6 +141,15 @@ class Employee {
   constructor(){}
 }
 
+interface IEmployee {
+    id: number;
+    name: string;
+}
+
+enum DAYS {
+  SUNDAY, MONDAY, TUESDAY
+}
+
 let emp = new Employee();
 emp.id = 123;
 emp.name = "Swati";
@@ -151,3 +161,5 @@ emp.name = "Swati";
 let mentor: { name: string , surname: string} =  { name: 'Ower', surname: 'maiden' };  // HashMap
 
 let mentor2 : Employee = { id: 123, name: 'Ower' };
+
+let mentor3 : IEmployee = { id: 123 , name : "Ower" };

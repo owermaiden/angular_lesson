@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TypecsriptComponent } from './typecsript/typecsript.component';
 import { BindingComponent } from './binding/binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { XcomponentComponent } from './xcomponent/xcomponent.component';
 import { ChildComponent } from './xcomponent/child/child.component';
@@ -12,16 +12,18 @@ import { LeftsideComponent } from './interComponent/leftside/leftside.component'
 import { RightSideComponent } from './interComponent/right-side/right-side.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ServiceDemoComponent } from './servicesDemo/service-demo/service-demo.component';
+import { FormsComponent } from './forms/forms.component';
+import { TdformComponent } from './tdform/tdform.component';
 
 const routes: Routes = [ 
 
   {path: 'bindings', component: BindingComponent },
   {path: 'directives', component: DirectivesComponent},
   {path: 'xcross', component: XcomponentComponent},
-  {path: 'typescript', component: TypecsriptComponent},
   {path: 'inter', component: RightSideComponent},
-  {path: 'left', component: LeftsideComponent},
   {path: 'service', component: ServiceDemoComponent},
+  {path: 'forms', component: FormsComponent},
+  {path: 'form', component: TdformComponent},
   {path: '', pathMatch: 'full', component: BindingComponent}
 
 ]
@@ -37,11 +39,14 @@ const routes: Routes = [
     ChildComponent,
     LeftsideComponent,
     RightSideComponent,
-    ServiceDemoComponent
+    ServiceDemoComponent,
+    FormsComponent,
+    TdformComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
