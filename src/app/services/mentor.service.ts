@@ -13,7 +13,7 @@ export class MentorService {
     new Mentor('Sahin', 3)
   ];
 
-  selectedMentor: Mentor = this.mentors[0];   // Angular change detection...
+  private selectedMentor: Mentor = this.mentors[0];   // Angular change detection...
   // selectedMentor$$: BehaviorSubject<Mentor> = new BehaviorSubject(this.selectedMentor);
   // selectedMentor$: Subject<Mentor> = new Subject(); // Subject is a kind of obervable       Queue -> send data (next) / get data (subscribe)
 

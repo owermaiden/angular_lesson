@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_lesson';
+  id: number = 1;
+  isAuthorized: boolean = true;
+
+  onClick(){
+      console.log('button')
+  }
+
+  onClickCustom(event: any){
+      console.log(event);
+  }
 }

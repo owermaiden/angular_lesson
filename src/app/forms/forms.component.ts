@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,10 +6,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.css']
 })
-export class FormsComponent {
+export class FormsComponent implements OnInit {
   myForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
     this.createForm();
   }
 

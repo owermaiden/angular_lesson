@@ -14,16 +14,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { ServiceDemoComponent } from './servicesDemo/service-demo/service-demo.component';
 import { FormsComponent } from './forms/forms.component';
 import { TdformComponent } from './tdform/tdform.component';
+import { RoutingComponent } from './routing/routing.component';
+import { CustomButtonComponent } from './custom-button/custom-button.component';
+import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [ 
 
   {path: 'bindings', component: BindingComponent },
   {path: 'directives', component: DirectivesComponent},
+  {path: 'routing/:id', component: RoutingComponent},
   {path: 'xcross', component: XcomponentComponent},
   {path: 'inter', component: RightSideComponent},
+  {path: 'left', component: LeftsideComponent},
   {path: 'service', component: ServiceDemoComponent},
   {path: 'forms', component: FormsComponent},
   {path: 'form', component: TdformComponent},
+  {path: 'reactive', component: RxjsDemoComponent},
   {path: '', pathMatch: 'full', component: BindingComponent}
 
 ]
@@ -41,12 +48,16 @@ const routes: Routes = [
     RightSideComponent,
     ServiceDemoComponent,
     FormsComponent,
-    TdformComponent
+    TdformComponent,
+    RoutingComponent,
+    CustomButtonComponent,
+    RxjsDemoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
