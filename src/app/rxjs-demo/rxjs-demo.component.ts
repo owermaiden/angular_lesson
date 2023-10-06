@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription, filter, flatMap, map, mergeMap, switchMap } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Observable, Subscription, of } from 'rxjs';
 import { Post } from '../post';
 import { PostService } from '../post.service';
 
@@ -21,7 +20,9 @@ export class RxjsDemoComponent implements OnInit, OnDestroy{
   });
   posts: Post[];
 
-  constructor(private http: HttpClient, private postservice: PostService){}
+  months: Observable<number> = of(1,2,3,4,5,6,7,8,9);
+
+  constructor(private postservice: PostService){}
 
   ngOnInit(): void {
     this.getData();

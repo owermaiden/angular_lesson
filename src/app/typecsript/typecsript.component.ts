@@ -10,11 +10,11 @@ export class TypecsriptComponent {
   constructor(){}
 
   // public String word = "string"; // Java
-  public word: string = 'https://www.tutorialsteacher.com/typescript';
-  private sayi: number = 12;
-  sayi2: number = 12.4;
+  public name: string = 'https://www.tutorialsteacher.com/typescript';
+  private schoolNumber: number = 12;
+  avarageGrade: number = 12.4;
   readonly isEqual: boolean = false;
-  static BookCount: number = 300;
+  static studentCount: number = 300;
   object1 : any = 23;
   object2 : any = 'asjcbak';
 
@@ -49,7 +49,7 @@ export class TypecsriptComponent {
     givenString.substring(1,5);
     givenString.indexOf('a');
 
-    let concatination: string = `${this.word} works in the ${this.sayi} department.`; 
+    let concatination: string = `${this.name} works in the ${this.schoolNumber} department.`; 
     // "merhaba" + givenString + " ";
     concatination.charAt(0);
     concatination.length;
@@ -80,8 +80,8 @@ export class TypecsriptComponent {
     }
 
     // forEach Loop
-    let arr = [10, 20, 30, 40];
-    for (var val of arr) {
+    let arr: number[] = [10, 20, 30, 40];
+    for (let val of arr) {
       console.log(val); // prints values: 10, 20, 30, 40
     }
 
@@ -135,8 +135,8 @@ export class TypecsriptComponent {
 
 // class example
 class Employee {
-  public id?: number;
-  public name?: string;
+  public id: number;
+  public name: string;
 
   constructor(){}
 }
@@ -153,6 +153,8 @@ enum DAYS {
 let emp = new Employee();
 emp.id = 123;
 emp.name = "Swati";
+
+let emp2: IEmployee = {id:1234 , name:'Ower'};
 
 
 
