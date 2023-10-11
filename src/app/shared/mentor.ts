@@ -1,5 +1,8 @@
 export class Mentor {
 
-    constructor(public name:string, public likeCount: number){}
+    constructor(
+        public id:number,
+        public name:string, 
+        public likeCount: number){}
 
 }

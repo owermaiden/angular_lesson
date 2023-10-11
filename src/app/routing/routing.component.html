@@ -1,1 +1,15 @@
-<h2>{{ "Product with id:" + productId }}</h2>
+
+<div class="row">
+    <div class="col-6">
+        <ul class="list-group" *ngIf="mentors">
+            <li class="list-group-item list-group-item-action" 
+                *ngFor="let mentor of mentors; let i = index"
+                routerLink="/mentor/{{ mentor.id }}"
+                (click)="onClick(mentor)"> {{ mentor.name }}</li>
+        </ul>
+    </div>
+    <div class="col-6">
+        <app-details></app-details>
+        <!-- <app-details [mentor]="selected"></app-details> -->
+    </div>
+</div>

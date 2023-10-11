@@ -17,12 +17,14 @@ import { TdformComponent } from './tdform/tdform.component';
 import { RoutingComponent } from './routing/routing.component';
 import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './routing/details/details.component';
 
 const routes: Routes = [ 
-
+  { path: '', redirectTo: '/bindings', pathMatch: 'full' },
   {path: 'bindings', component: BindingComponent },
   {path: 'directives', component: DirectivesComponent},
-  {path: 'routing/:id', component: RoutingComponent},
+  {path: 'routing', component: RoutingComponent},
+  {path: 'mentor/:id', component: DetailsComponent},
   {path: 'xcross', component: XcomponentComponent},
   {path: 'inter', component: RightSideComponent},
   {path: 'left', component: LeftsideComponent},
@@ -30,7 +32,7 @@ const routes: Routes = [
   {path: 'forms', component: FormsComponent},
   {path: 'form', component: TdformComponent},
   {path: 'reactive', component: RxjsDemoComponent},
-  {path: '', pathMatch: 'full', component: BindingComponent}
+
 
 ]
 
@@ -49,7 +51,8 @@ const routes: Routes = [
     FormsComponent,
     TdformComponent,
     RoutingComponent,
-    RxjsDemoComponent
+    RxjsDemoComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

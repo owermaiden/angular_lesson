@@ -8,9 +8,9 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class MentorService {
 
   private mentors: Mentor[] = [
-    new Mentor('Ower', 10), 
-    new Mentor('Math', 2),
-    new Mentor('Sahin', 3)
+    new Mentor(1,'Ower', 10), 
+    new Mentor(2,'Math', 2),
+    new Mentor(3,'Sahin', 3)
   ];
 
   private selectedMentor: Mentor = this.mentors[0];   // Angular change detection...
