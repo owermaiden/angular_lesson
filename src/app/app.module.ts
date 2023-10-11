@@ -15,7 +15,6 @@ import { ServiceDemoComponent } from './servicesDemo/service-demo/service-demo.c
 import { FormsComponent } from './forms/forms.component';
 import { TdformComponent } from './tdform/tdform.component';
 import { RoutingComponent } from './routing/routing.component';
-import { CustomButtonComponent } from './custom-button/custom-button.component';
 import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -50,7 +49,6 @@ const routes: Routes = [
     FormsComponent,
     TdformComponent,
     RoutingComponent,
-    CustomButtonComponent,
     RxjsDemoComponent
   ],
   imports: [
